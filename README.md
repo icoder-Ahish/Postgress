@@ -30,7 +30,7 @@ You can also access PostgreSQL using a graphical user interface (GUI) tool such 
             database="database_name",
             # database="streamlitdb",
             user="postgres",
-            password="linux"
+            password="Your_password"
         )
         return conn
 
