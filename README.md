@@ -23,7 +23,7 @@ You can also access PostgreSQL using a graphical user interface (GUI) tool such 
     import streamlit as st
     import psycopg2
 
-    # Define function to establish database connection
+# Define function to establish database connection
     def create_conn():
         conn = psycopg2.connect(
             host="localhost",
@@ -34,23 +34,23 @@ You can also access PostgreSQL using a graphical user interface (GUI) tool such 
         )
         return conn
 
-    # Connect to database
+# Connect to database
     conn = create_conn()
 
-    # Define SQL query
+# Define SQL query
     query = "SELECT * FROM users;"
-    # query = "SELECT * FROM streamlitTable;"
+# query = "SELECT * FROM streamlitTable;"
 
-    # Execute query
+# Execute query
     cur = conn.cursor()
     cur.execute(query)
 
-    # Fetch and display results
+# Fetch and display results
     results = cur.fetchall()
     for row in results:
         st.write(row)
 
-    # Close cursor and connection
+# Close cursor and connection
     cur.close()
     conn.close()
 
